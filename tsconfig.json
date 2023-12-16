@@ -1,0 +1,16 @@
+{
+  "exclude": [
+    "node_modules",
+    "lib"
+  ],
+  "compilerOptions": {
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "outDir": "lib",
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": true,
+  }
+}
