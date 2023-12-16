@@ -2,10 +2,23 @@
   "name": "numerify-js",
   "version": "1.0.0",
   "description": "A Javascript package designed to effortlessly convert numbers between Arabic and various world languages, including Geez, Roman, and Chinese.",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
   },
+  "files": [
+    "build",
+    "README.md"
+  ],
   "author": "Wuletaw Wonte",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  }
 }
