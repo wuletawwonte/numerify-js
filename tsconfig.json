@@ -1,13 +1,13 @@
 {
   "exclude": [
     "node_modules",
-    "lib"
+    "build"
   ],
   "compilerOptions": {
     "lib": ["ESNext"],
     "target": "ESNext",
     "module": "ESNext",
-    "outDir": "lib",
+    "outDir": "build",
     "moduleDetection": "force",
     "skipLibCheck": true,
     "strict": true,
