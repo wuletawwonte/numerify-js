@@ -8,12 +8,11 @@ const convertFunctions: ConvertFunctions = {
   geez: geez.convert
 }
 
-const convert = (number: number | string, to: string) => {
+const convert = (inputNumber: number | string, to: string) => {
   const convertFunction = convertFunctions[to]
-  const inputNumber = parseFloat(number as string)
 
   if (convertFunction) {
-    return convertFunction(inputNumber)
+    return convertFunction(+inputNumber)
   } else {
     throw new Error(`No converter for ${to}`)
   }
