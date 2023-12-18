@@ -8,7 +8,8 @@ const convertFunctions: ConvertFunctions = {
   geez: new Geez().convert,
 };
 
-const convert = (inputNumber: number | string, to: string) => {
+const convert = (inputNumber: number | string, options: { to: string }) => {
+  const { to } = options;
   const convertFunction = convertFunctions[to];
 
   if (convertFunction) {
