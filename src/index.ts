@@ -4,12 +4,19 @@ interface ConvertFunctions {
   [key: string]: (number: number) => string;
 }
 
+interface Options {
+  to?: string;
+}
+
 const convertFunctions: ConvertFunctions = {
   geez: new Geez().convert,
 };
 
-const convert = (inputNumber: number | string, options: { to: string }) => {
-  const { to } = options;
+const convert = (
+  inputNumber: number | string,
+  options: Options = {}
+): string => {
+  const { to = "geez" } = options;
   const convertFunction = convertFunctions[to];
 
   if (convertFunction) {
