@@ -1,5 +1,7 @@
-export default {
-  convert: () => {
+class Geez {
+  convert() {
     return "geez";
-  },
-};
+  }
+}
+
+export default Geez;

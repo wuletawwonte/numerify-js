@@ -1,11 +1,11 @@
-import geez from "./converter/geez.js";
+import Geez from "./converter/geez.js";
 
 interface ConvertFunctions {
   [key: string]: (number: number) => string;
 }
 
 const convertFunctions: ConvertFunctions = {
-  geez: geez.convert,
+  geez: new Geez().convert,
 };
 
 const convert = (inputNumber: number | string, to: string) => {
