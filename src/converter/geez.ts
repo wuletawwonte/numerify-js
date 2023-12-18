@@ -1,6 +1,6 @@
 class Geez {
-  convert() {
-    return "geez";
+  static convert(): string {
+    return "geeziyo";
   }
 }
 

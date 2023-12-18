@@ -9,7 +9,7 @@ interface Options {
 }
 
 const convertFunctions: ConvertFunctions = {
-  geez: new Geez().convert,
+  geez: Geez.convert,
 };
 
 const convert = (
@@ -22,10 +22,10 @@ const convert = (
   if (convertFunction) {
     return convertFunction(+inputNumber);
   } else {
-    throw new Error(`No converter for ${to}`);
+    return `No converter for "${to}"`;
   }
 };
 
-// console.log(convert("1", "geez"));
+// console.log(convert("1", { to: "gez" }));
 
 export default convert;
