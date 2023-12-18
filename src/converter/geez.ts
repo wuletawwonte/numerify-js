@@ -1,5 +1,5 @@
 export default {
   convert: () => {
-      return "geez";
-  }
-}
+    return "geez";
+  },
+};
