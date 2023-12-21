@@ -21,13 +21,19 @@ class Geez {
     90: "፺",
   };
 
-  inputNumber: number;
+  inputNumber: number | string;
 
-  constructor(inputNumber: number) {
+  constructor(inputNumber: number | string) {
     this.inputNumber = inputNumber;
   }
 
   convert(): string {
+    this.inputNumber = this.inputNumber.toString();
+
+    if (this.inputNumber.length % 2 !== 0) {
+      this.inputNumber = `0${this.inputNumber}`;
+    }
+
     return "geeziyo";
   }
 }
