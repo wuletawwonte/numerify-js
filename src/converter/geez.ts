@@ -1,5 +1,11 @@
 class Geez {
-  static convert(): string {
+  inputNumber: number;
+
+  constructor(inputNumber: number) {
+    this.inputNumber = inputNumber;
+  }
+
+  convert(): string {
     return "geeziyo";
   }
 }

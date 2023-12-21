@@ -1,31 +1,23 @@
-import Geez from "./converter/geez.js";
-
-interface ConvertFunctions {
-  [key: string]: (number: number) => string;
-}
+import NumeralFactory from "./factory.js";
 
 interface Options {
   to?: string;
 }
-
-const convertFunctions: ConvertFunctions = {
-  geez: Geez.convert,
-};
 
 const convert = (
   inputNumber: number | string,
   options: Options = {}
 ): string => {
   const { to = "geez" } = options;
-  const convertFunction = convertFunctions[to];
+  const converter = NumeralFactory(+inputNumber, to);
 
-  if (convertFunction) {
-    return convertFunction(+inputNumber);
+  if (converter) {
+    return converter.convert();
   } else {
     return `No converter for "${to}"`;
   }
 };
 
-// console.log(convert("1", { to: "gez" }));
+console.log(convert("1", { to: "geez" }));
 
 export default convert;
