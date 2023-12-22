@@ -1,8 +1,5 @@
 {
-  "exclude": [
-    "node_modules",
-    "build"
-  ],
+  "exclude": ["node_modules", "build"],
   "compilerOptions": {
     "lib": ["ESNext"],
     "target": "ESNext",
@@ -11,6 +8,6 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "strict": true,
-    "noImplicitAny": true,
+    "noImplicitAny": true
   }
 }
