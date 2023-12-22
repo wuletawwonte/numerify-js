@@ -1,7 +1,7 @@
 import Base from "./base.js";
 
 class Geez extends Base {
-  NUMERALS = {
+  NUMERALS: { [key: string]: string } = {
     0: "",
     1: "፩",
     2: "፪",
@@ -37,8 +37,7 @@ class Geez extends Base {
     }
 
     const groupedInput = this.groupByTwo(this.inputNumber);
-
-    return this.inputNumber;
+    return this.addDelimiter(groupedInput);
   }
 
   private groupByTwo(stringInput: string): string[] {
@@ -50,6 +49,42 @@ class Geez extends Base {
     }
 
     return result;
+  }
+
+  private addDelimiter(groupedString: string[]): string {
+    const lastIndex = groupedString.length - 1;
+    for (let i = lastIndex; i >= 0; i--) {
+      if (i == lastIndex) {
+        groupedString[i] = this.doubleDigitGeez(groupedString[i]);
+        continue;
+      }
+
+      const delimiter = i % 2 === 0 ? "፻" : "፼";
+      groupedString[i] =
+        this.doubleDigitGeez(groupedString[i], +groupedString[i] === 1) +
+        delimiter;
+    }
+
+    return groupedString.join();
+  }
+
+  private doubleDigitGeez(stringInput: string, skipOne = false): string {
+    if (skipOne) {
+      return "";
+    }
+
+    return stringInput
+      .split("")
+      .map((char, i) => {
+        return i === 0
+          ? this.singleDigitGeez(char.toString() + "0")
+          : this.singleDigitGeez(char);
+      })
+      .join("");
+  }
+
+  private singleDigitGeez(stringInput: string): string {
+    return this.NUMERALS[stringInput];
   }
 }
 
