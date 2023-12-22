@@ -18,6 +18,6 @@ const convert = (
   }
 };
 
-// console.log(convert("1", { to: "geez" }));
+// console.log(convert(3, { to: "geez" }));
 
 export default convert;

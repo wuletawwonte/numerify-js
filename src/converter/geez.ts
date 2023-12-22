@@ -21,20 +21,32 @@ class Geez {
     90: "፺",
   };
 
-  inputNumber: number | string;
+  inputNumber: string;
 
   constructor(inputNumber: number | string) {
-    this.inputNumber = inputNumber;
+    this.inputNumber = inputNumber.toString();
   }
 
   convert(): string {
-    this.inputNumber = this.inputNumber.toString();
-
+    // prepend 0 if the length of the inputNumber is odd
     if (this.inputNumber.length % 2 !== 0) {
       this.inputNumber = `0${this.inputNumber}`;
     }
 
-    return "geeziyo";
+    const groupedInput = this.groupByTwo(this.inputNumber);
+
+    return this.inputNumber;
+  }
+
+  private groupByTwo(stringInput: string): string[] {
+    stringInput.split("");
+    const result = [];
+
+    for (let i = 0; i < stringInput.length; i += 2) {
+      result.push(stringInput.slice(i, i + 2));
+    }
+
+    return result;
   }
 }
 
