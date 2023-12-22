@@ -1,4 +1,6 @@
-class Geez {
+import Base from "./base.js";
+
+class Geez extends Base {
   NUMERALS = {
     0: "",
     1: "፩",
@@ -24,6 +26,7 @@ class Geez {
   inputNumber: string;
 
   constructor(inputNumber: number | string) {
+    super();
     this.inputNumber = inputNumber.toString();
   }
 
