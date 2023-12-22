@@ -18,6 +18,4 @@ const convert = (
   }
 };
 
-console.log(convert(34, { to: "geez" }));
-
 export default convert;
