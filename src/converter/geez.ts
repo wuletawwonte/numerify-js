@@ -1,4 +1,4 @@
-import Base from './base.js'
+import Base from './base'
 
 class Geez extends Base {
   NUMERALS: { [key: string]: string } = {
