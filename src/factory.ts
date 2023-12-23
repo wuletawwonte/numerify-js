@@ -1,4 +1,4 @@
-import Geez from './converter/geez.js'
+import Geez from './converter/geez'
 
 const NumeralFactory = (inputNumber: number | string, className: string) => {
   if (className === 'geez') {

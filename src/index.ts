@@ -1,4 +1,4 @@
-import NumeralFactory from './factory.js'
+import NumeralFactory from './factory'
 
 interface Options {
   to?: string

@@ -1,5 +1,5 @@
 {
-  "exclude": ["node_modules", "build"],
+  "exclude": ["node_modules", "build", "test", "jest.config.js"],
   "compilerOptions": {
     "lib": ["ESNext"],
     "target": "ESNext",
@@ -8,6 +8,8 @@
     "moduleDetection": "force",
     "skipLibCheck": true,
     "strict": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "esModuleInterop": true
   }
 }
