@@ -1,21 +1,21 @@
-import NumeralFactory from "./factory.js";
+import NumeralFactory from './factory.js'
 
 interface Options {
-  to?: string;
+  to?: string
 }
 
 const convert = (
   inputNumber: number | string,
   options: Options = {}
 ): string => {
-  const { to = "geez" } = options;
-  const converter = NumeralFactory(+inputNumber, to);
+  const { to = 'geez' } = options
+  const converter = NumeralFactory(+inputNumber, to)
 
   if (converter) {
-    return converter.convert();
+    return converter.convert()
   } else {
-    return `No converter for "${to}"`;
+    return `No converter for "${to}"`
   }
-};
+}
 
-export default convert;
+export default convert

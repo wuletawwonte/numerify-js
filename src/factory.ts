@@ -1,11 +1,11 @@
-import Geez from "./converter/geez.js";
+import Geez from './converter/geez.js'
 
 const NumeralFactory = (inputNumber: number | string, className: string) => {
-  if (className === "geez") {
-    return new Geez(inputNumber);
+  if (className === 'geez') {
+    return new Geez(inputNumber)
   } else {
-    return null;
+    return null
   }
-};
+}
 
-export default NumeralFactory;
+export default NumeralFactory
