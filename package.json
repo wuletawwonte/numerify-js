@@ -8,7 +8,8 @@
     "test": "jest",
     "start": "npx tsc --watch",
     "build": "npx tsc",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "publish": "npm publish --access public"
   },
   "files": [
     "build",
