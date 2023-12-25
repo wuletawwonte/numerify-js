@@ -40,6 +40,7 @@ class Geez extends Base {
     return this.addDelimiter(groupedInput)
   }
 
+  // Group the input string by two
   private groupByTwo(stringInput: string): string[] {
     stringInput.split('')
     const result = []
