@@ -10,7 +10,7 @@
     "build": "npx tsc",
     "lint": "eslint . --ext .ts",
     "publish": "npm publish --access public",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release --branches release"
   },
   "files": [
     "build",
