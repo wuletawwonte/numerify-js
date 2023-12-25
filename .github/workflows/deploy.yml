@@ -5,9 +5,8 @@ name: Node.js CD
 
 on:
   push:
-    branches: ['release']
-  pull_request:
-    branches: ['release']
+    branches:
+      - main
 
 jobs:
   publish:
