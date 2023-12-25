@@ -1,0 +1,52 @@
+{
+  "name": "numerify-js",
+  "version": "0.0.0-development",
+  "description": "A Javascript package designed to effortlessly convert numbers between Arabic and various world languages, including Geez, Roman, and Chinese.",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "start": "npx tsc --watch",
+    "commit": "git-cz",
+    "build": "npx tsc",
+    "lint": "eslint . --ext .ts",
+    "publish": "npm publish --access public",
+    "semantic-release": "semantic-release --branches release"
+  },
+  "files": [
+    "build",
+    "README.md"
+  ],
+  "author": "Wuletaw Wonte",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "semantic-release": "^22.0.12",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wuletawwonte/numerify-js.git"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
