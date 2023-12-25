@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/wuletawwonte/numerify-js.git"
+    "url": "git+https://github.com/wuletawwonte/numerify-js.git"
   },
   "config": {
     "commitizen": {
