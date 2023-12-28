@@ -66,7 +66,7 @@ class Geez extends Base {
         delimiter
     }
 
-    return groupedString.join()
+    return groupedString.join('')
   }
 
   private doubleDigitGeez(stringInput: string, skipOne = false): string {
