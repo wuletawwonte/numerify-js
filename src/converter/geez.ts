@@ -23,20 +23,20 @@ export default class Geez extends Base {
     90: '፺',
   }
 
-  private _inputNumber: string
+  private _input: string
 
-  constructor(inputNumber: number | string) {
+  constructor(inputValue: number | string) {
     super()
-    this._inputNumber = inputNumber.toString()
+    this._input = inputValue.toString()
   }
 
   convert(): string {
     // prepend 0 if the length of the inputNumber is odd
-    if (this._inputNumber.length % 2 !== 0) {
-      this._inputNumber = `0${this._inputNumber}`
+    if (this._input.length % 2 !== 0) {
+      this._input = this._input.padStart(this._input.length + 1, '0')
     }
 
-    const groupedInput = this.groupByTwo(this._inputNumber)
+    const groupedInput = this.groupByTwo(this._input)
     return this.addDelimiter(groupedInput)
   }
 
