@@ -1,6 +1,6 @@
 import Base from './base.js'
 
-class Geez extends Base {
+export default class Geez extends Base {
   NUMERALS: { [key: string]: string } = {
     0: '',
     1: '፩',
@@ -23,20 +23,20 @@ class Geez extends Base {
     90: '፺',
   }
 
-  inputNumber: string
+  private _input: string
 
-  constructor(inputNumber: number | string) {
+  constructor(inputValue: number | string) {
     super()
-    this.inputNumber = inputNumber.toString()
+    this._input = inputValue.toString()
   }
 
   convert(): string {
     // prepend 0 if the length of the inputNumber is odd
-    if (this.inputNumber.length % 2 !== 0) {
-      this.inputNumber = `0${this.inputNumber}`
+    if (this._input.length % 2 !== 0) {
+      this._input = this._input.padStart(this._input.length + 1, '0')
     }
 
-    const groupedInput = this.groupByTwo(this.inputNumber)
+    const groupedInput = this.groupByTwo(this._input)
     return this.addDelimiter(groupedInput)
   }
 
@@ -88,5 +88,3 @@ class Geez extends Base {
     return this.NUMERALS[stringInput]
   }
 }
-
-export default Geez

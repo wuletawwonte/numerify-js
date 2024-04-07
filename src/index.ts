@@ -4,10 +4,10 @@ interface Options {
   to?: string
 }
 
-const convert = (
+export default function convert(
   inputNumber: number | string,
   options: Options = {}
-): string => {
+): string {
   const { to = 'geez' } = options
   const converter = NumeralFactory(+inputNumber, to)
 
@@ -17,5 +17,3 @@ const convert = (
     return `No converter for "${to}"`
   }
 }
-
-export default convert
